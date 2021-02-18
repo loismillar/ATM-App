@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lois Millar - The ATM App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/app.js"></script>
+</head>
+
+<body>
+    <h1 class="app_title">THE ATM APP</h1>
+    <hr>
+    <div class="atm_screen">
+        <div class="start pad">
+            <button id="insert_card">Insert Card</button>
+        </div>
+        <div id="pin_num" class="hide pad">
+            <input type="password" id="pin" maxlength="4" placeholder="Enter Pin">
+            <button id="submit_pin">Enter</button>
+            <div id="invaild_pin" class="hide error">
+                <p>Invaild pin</p>
+            </div>
+        </div>
+        <div id="userScreen" class="hide">
+            <div id="showBalance" class="show">
+                <h2>Current Balance:</h2>
+                <p id="currentBal"></p>
+            </div>
+            <div id="withdrawal">
+                <input type="text" id="amount" placeholder="Enter withdrawal amount">
+                <button id="submit_amount">Submit</button>
+                <button id="exit" class="exit">Exit</button>
+                <p id="insufficient" class="hide error">You have insufficient funds in your account!<br>Your overdraft
+                    limit is £100</p>
+                <p id="incorrect" class="hide error">This is an invalid amount - Must be a multiple of 5!</p>
+            </div>
+        </div>
+        <div id="getCash" class="hide">
+            <div id="newBalance" class="show">
+                <h2>Remaining Balance:</h2>
+                <p id="displayBalance"></p>
+            </div>
+            <div id="cash" class="show">
+                <h2>Please take your money:</h2>
+                <p id="displayNotes"></p>
+            </div>
+            <div id="transComplete" class="show trans">
+                <h2>Do you wish to make another withdrawal?</h2>
+                <button id="yes">Yes</button>
+                <button id="no">No</button>
+            </div>
+        </div>
+        <div id="takeCard" class="hide pad">
+            <p>Please take your card!</p>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
